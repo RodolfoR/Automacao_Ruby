@@ -7,6 +7,7 @@ Funcionalidade: Gerenciar informacoes de usuarios
     Eu quero realizar as requisições na API
     Para conseguir manipular informações do cadastro de usuários
 
+@criarUser
 Esquema do Cenário: Get para recuperar um usuario pelo id
     Dado que possuo o endereco da api
     Quando realizo uma chamada GET users com o id <id_user>
@@ -16,3 +17,9 @@ Esquema do Cenário: Get para recuperar um usuario pelo id
     |id_user|
     |1      |
     |55     |
+
+@post_user
+Cenário: Post para cadastrar um novo usuario
+    Dado que possuo o endereco da api
+    Quando realizar uma requisicao POST para cadastrar um usuario
+    Então o usuario sera cadastrado com sucesso
